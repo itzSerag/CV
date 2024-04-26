@@ -1,10 +1,7 @@
-"use client";
-// @flow strict
 import { isValidEmail } from '@/utils/check-email';
 import emailjs from '@emailjs/browser';
 import axios from 'axios';
 import { useState } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
 import { TbMailForward } from "react-icons/tb";
 import { toast } from 'react-toastify';
 
@@ -14,7 +11,6 @@ function ContactForm() {
     email: '',
     message: '',
   });
-  const [captcha, setCaptcha] = useState(null);
   const [error, setError] = useState({
     email: false,
     required: false,
@@ -27,22 +23,8 @@ function ContactForm() {
   };
 
   const handleSendMail = async (e) => {
-    if (!captcha) {
-      toast.error('Please complete the captcha!');
-      return;
-    } else {
-      const res = await axios.post(`${process.env.NEXT_PUBLIC_APP_URL}/api/google`, {
-        token: captcha
-      });
-
-      setCaptcha(null);
-      if (!res.data.success) {
-        toast.error('Captcha verification failed!');
-        return;
-      };
-    };
-
     e.preventDefault();
+
     if (!input.email || !input.message || !input.name) {
       setError({ ...error, required: true });
       return;
@@ -50,26 +32,25 @@ function ContactForm() {
       return;
     } else {
       setError({ ...error, required: false });
-    };
+    }
 
     const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
     const options = { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY };
 
     try {
-      const res = await emailjs.send(serviceID, templateID, input, options);
-
-      if (res.status === 200) {
-        toast.success('Message sent successfully!');
-        setInput({
-          name: '',
-          email: '',
-          message: '',
-        });
-      };
+      await emailjs.send(serviceID, templateID, input, options);
+      toast.success('Message sent successfully!');
+      setInput({
+        name: '',
+        email: '',
+        message: '',
+      });
+      // Reload the page after sending the message
+      window.location.reload();
     } catch (error) {
       toast.error(error?.text || error);
-    };
+    }
   };
 
   return (
@@ -127,10 +108,7 @@ function ContactForm() {
               value={input.message}
             />
           </div>
-          <ReCAPTCHA
-            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-            onChange={(code) => setCaptcha(code)}
-          />
+
           <div className="flex flex-col items-center gap-2">
             {error.required &&
               <p className="text-sm text-red-400">
@@ -150,6 +128,6 @@ function ContactForm() {
       </div>
     </div>
   );
-};
+}
 
 export default ContactForm;
