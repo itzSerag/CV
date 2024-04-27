@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <meta favicon="./favicon.ico" />
+      {/* <meta favicon="./favicon.ico" /> */}
       <meta name="google-site-verification" content="IJmxHYDpir-qXYB7SshaYEpjbtGSIjDBL5MtQzEqyYY" />
       <meta keywords="Serag Eldien, Serag, Eldien, Portfolio, Software Developer, Backend Developer, Fullstack Developer, Web Developer, Developer, Programmer, Software Engineer, Software, Backend, Frontend, Fullstack, Web, Developer, Programmer, Software Engineer, Software, Backend, Frontend, Fullstack, Web" />
       <meta property="og:type" content="website" />
