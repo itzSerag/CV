@@ -13,5 +13,6 @@ export const personalData = {
   stackOverflow: '',
   leetcode: "https://leetcode.com/u/user8486Mh",
   devUsername: "itzserag",
-  resume: "https://doctalker-app.s3.amazonaws.com/SeragEldeinResume.pdf"
+  resume: "https://mybucket-serag-eldein.s3.amazonaws.com/SeragEldeinResume.pdf",
+"
 }  
