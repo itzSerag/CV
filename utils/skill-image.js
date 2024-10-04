@@ -73,7 +73,7 @@ import webix from "/public/svg/skills/webix.svg";
 import wolframalpha from "/public/svg/skills/wolframalpha.svg";
 import wordpress from "/public/svg/skills/wordpress.svg";
 import nodeJs from "/public/svg/skills/nodejs-icon.svg";
-import NestJs from "/public/svg/skills/NestJs.svg";
+import NestJs from "/public/svg/skills/nestjs-icon.svg";
 
 export const skillsImage = (skill) => {
   const skillID = skill.toLowerCase();
