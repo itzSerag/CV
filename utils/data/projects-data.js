@@ -2,6 +2,9 @@ import ayla from "/public/image/ayla.jpg";
 import crefin from "/public/image/crefin.jpg";
 import realEstate from "/public/image/real-estate.jpg";
 import travel from "/public/image/travel.jpg";
+import foodish from "./projects-data-img/foodish.jpeg";
+import doctalker from "./projects-data-img/doctalker.jpeg";
+import online_courses from "./projects-data-img/online_courses.jpeg";
 
 export const projectsData = [
   {
@@ -28,8 +31,7 @@ export const projectsData = [
     role: "Backend Developer",
     code: "https://github.com/itzSerag/DocTalker__Backend",
     demo: "",
-    image:
-      "https://drive.google.com/file/d/1G-A5Qgy83hMG_To0dvWsSMpAYmpP0rR-/view?usp=drive_link",
+    image: doctalker,
   },
   {
     id: 2,
@@ -40,8 +42,7 @@ export const projectsData = [
     role: "Backend Developer",
     code: "https://github.com/itzSerag/Food_Delivary",
     demo: "",
-    image:
-      "https://drive.google.com/file/d/14-OOOLt_Cjsn8DVUXFKlrFxeYHgecTG7/view?usp=drive_link",
+    image: foodish,
   },
   {
     id: 3,
@@ -61,7 +62,7 @@ export const projectsData = [
 
     code: "https://github.com/itzSerag/Online_Courses_Backend",
     demo: "https://englishome.netlify.app/",
-    image: crefin,
+    image: online_courses,
   },
 ];
 
