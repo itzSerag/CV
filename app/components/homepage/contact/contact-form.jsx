@@ -49,7 +49,7 @@ function ContactForm() {
     } else if (error.email) {
       return;
     } else {
-      setError({ ...error, required: false });
+      setError({  ...error, required: false });
     };
 
     const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
@@ -60,7 +60,7 @@ function ContactForm() {
       const res = await emailjs.send(serviceID, templateID, input, options);
 
       if (res.status === 200) {
-        toast.success('Message sent successfully!');
+        toast.success('Message sent successfully!!');
         setInput({
           name: '',
           email: '',

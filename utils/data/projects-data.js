@@ -3,8 +3,8 @@ import crefin from "/public/image/crefin.jpg";
 import realEstate from "/public/image/real-estate.jpg";
 import travel from "/public/image/travel.jpg";
 import foodish from "./projects-data-img/foodish.jpeg";
-import doctalker from "./projects-data-img/doctalker.jpeg";
-import online_courses from "./projects-data-img/online_courses.jpeg";
+import doctalker from "./projects-data-img/doctalker.png";
+import online_courses from "./projects-data-img/online_courses.png";
 
 export const projectsData = [
   {
