@@ -14,7 +14,6 @@ export const skillsData = [
   "C++",
   "Python",
   "Node js",
-  "Django",
   "java",
   "Nginx",
   "NestJs",
