@@ -133,7 +133,7 @@ function HeroSection() {
               </div>
 
               <div className="grid grid-cols-2 gap-y-3 mb-6 text-[11px] md:text-xs">
-                <div><span className="text-neutral-500">Runtime:</span> <span className="text-[#16f2b3]">Node.js v20.11</span></div>
+                <div><span className="text-neutral-500">Runtime:</span> <span className="text-[#16f2b3]">Node.js v22</span></div>
                 <div><span className="text-neutral-500">Framework:</span> <span className="text-white">NestJS</span></div>
                 <div><span className="text-neutral-500">Database:</span> <span className="text-white">PostgreSQL + Redis</span></div>
                 <div><span className="text-neutral-500">Latency:</span> <span className="text-cyan-400">&lt;10ms</span></div>
