@@ -1,32 +1,26 @@
-import ayla from "/public/image/ayla.jpg";
-import crefin from "/public/image/crefin.jpg";
-import realEstate from "/public/image/real-estate.jpg";
-import travel from "/public/image/travel.jpg";
-import foodish from "./projects-data-img/foodish.jpeg";
+import chatty from "./projects-data-img/chatty.png";
 import doctalker from "./projects-data-img/doctalker.png";
+import foodish from "./projects-data-img/foodish.jpeg";
 import online_courses from "./projects-data-img/online_courses.png";
 
 export const projectsData = [
   {
     id: 1,
-    name: "AI Powered Document Chat App - DocTalker",
+    name: "DocTalker — AI-Powered Document Chat",
     description:
-      "Me and my team built an AI-powered Document chat Web Application . I have developed API using Express, JS , OpenAI, AWS, and MongoDB. Used OTP via EmailJs, Google for the authentication system. Built AI assistants using OpenAI's latest model. Voice messages are converted to text  , The app fetches data from pdfs , .docx , urls (any website , youtube transcript) , handwritten pdf with highest accuracy and chunk data into samller piceses then generates embeddings for each chunk then process these embeddings and user query embedding and make semmentic serach over the pdf chunks , summerize the pdfs , clean code and highest authentication and security standards. ",
+      "Full-stack AI platform where users chat with PDFs, .docx files, YouTube videos, and web pages. Built vector-search pipelines using OpenAI embeddings and MongoDB Atlas, with semantic chunking and similarity search for maximum accuracy. Supports voice-to-text input, real-time streaming responses, and multi-format document ingestion.",
     tools: [
       "Express",
       "MongoDB",
       "OpenAI API",
       "AWS S3",
-      "Node Mailer",
-      ,
       "Nginx",
-      "Embeddings",
-      "MongoDB Transactions",
       "JWT",
       "Gemini",
-      "VectorBD",
-      "semantic search",
-      "huggingface",
+      "VectorDB",
+      "Semantic Search",
+      "HuggingFace",
+      "Node Mailer",
     ],
     role: "Backend Developer",
     code: "https://github.com/itzSerag/DocTalker__Backend",
@@ -35,20 +29,29 @@ export const projectsData = [
   },
   {
     id: 2,
-    name: "Foodish App for food delivery",
+    name: "Chatty — Real-Time Chat Application",
     description:
-      "Develop a robust food delivery backend managing customers, vendors, delivery users, payments, OTP-based authentication, and real-time geographic tracking to assign the nearest available delivery users within a vendor's service area and handle User's Voucher for company discounts and provide admin crud operations for dashboard RBA ",
-    tools: ["Express", "MongoDB", "Typescript", "SMS - OTP ", "Stripe", "JWT"],
+      "Scalable real-time messaging platform built with Socket.io and NestJS. Features JWT authentication, private & group chat rooms, online presence tracking, message history pagination via PostgreSQL, and Redis-powered pub/sub for horizontal scalability across multiple server instances.",
+    tools: [
+      "NestJs",
+      "Socket.io",
+      "PostgreSQL",
+      "Prisma",
+      "Redis",
+      "JWT",
+      "Typescript",
+      "Docker",
+    ],
     role: "Backend Developer",
-    code: "https://github.com/itzSerag/Food_Delivary",
+    code: "https://github.com/itzSerag/Chatty",
     demo: "",
-    image: foodish,
+    image: chatty,
   },
   {
     id: 3,
-    name: "Online Courses English Academy",
+    name: "Englishome — Online Courses Academy",
     description:
-      "Creating a high-scale online courses application utilizing NestJS and TypeScript for a clean, maintainable code structure, PostgreSQL with Prisma ORM and barrel pattern design for efficient database management, AWS SES for OTP-based secure user authentication, and seamless integration of Facebook and Google OAuth using Passport for easy login. Additionally, the app incorporates Paymob Gateway for fast and secure transactions, while AWS S3 is leveraged for data storage with CDN capabilities to ensure quick access",
+      "Production-ready e-learning backend for an English Academy. Architected with NestJS and PostgreSQL (Prisma ORM), featuring AWS SES for OTP authentication, Google & Facebook OAuth via Passport.js, Paymob payment gateway integration, and AWS S3 + CDN for fast media delivery.",
     tools: [
       "NestJs",
       "Postgres",
@@ -57,12 +60,23 @@ export const projectsData = [
       "AWS S3",
       "JWT",
       "AWS SES",
+      "Passport.js",
     ],
     role: "Backend Developer",
-
     code: "https://github.com/itzSerag/Online_Courses_Backend",
     demo: "https://englishome.netlify.app/",
     image: online_courses,
+  },
+  {
+    id: 4,
+    name: "Foodish — Food Delivery Backend",
+    description:
+      "Robust food delivery platform managing customers, vendors, and delivery users with real-time geographic tracking and nearest-driver assignment algorithm. Features OTP authentication via SMS, Stripe payment integration, admin RBAC dashboard, and vendor voucher management system.",
+    tools: ["Express", "MongoDB", "Typescript", "SMS OTP", "Stripe", "JWT"],
+    role: "Backend Developer",
+    code: "https://github.com/itzSerag/Food_Delivary",
+    demo: "",
+    image: foodish,
   },
 ];
 

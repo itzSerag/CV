@@ -1,11 +1,10 @@
+"use client";
 // @flow strict
-
 import { experiences } from "@/utils/data/experience";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
-import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
-import experience from '/public/lottie/code.json';
+import { motion } from "framer-motion";
 
 function Experience() {
   return (
@@ -19,28 +18,28 @@ function Experience() {
       />
 
       <div className="flex justify-center my-5 lg:py-8">
-        <div className="flex  items-center">
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-          <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
+        <div className="flex items-center">
+          <span className="w-24 h-[1px] bg-neutral-800"></span>
+          <span className="bg-neutral-900 border border-neutral-800 w-fit text-white px-5 py-2 text-xl rounded-md uppercase tracking-wider font-mono">
             Experience
           </span>
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
+          <span className="w-24 h-[1px] bg-neutral-800"></span>
         </div>
       </div>
 
-      <div className="py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-          <div className="flex justify-center items-start">
-            <div className="w-full h-full">
-              <AnimationLottie animationPath={experience} />
-            </div>
-          </div>
-
-          <div>
-            <div className="flex flex-col gap-6">
-              {
-                experiences.map(experience => (
-                  <GlowCard key={experience.id} identifier={`experience-${experience.id}`}>
+      <div className="py-8 flex justify-center">
+        <div className="w-full max-w-3xl">
+          <div className="flex flex-col gap-6">
+            {
+              experiences.map((experience, index) => (
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.15 }}
+                  key={experience.id}
+                >
+                  <GlowCard identifier={`experience-${experience.id}`}>
                     <div className="p-3 relative">
                       <Image
                         src="/blur-23.svg"
@@ -54,24 +53,25 @@ function Experience() {
                           {experience.duration}
                         </p>
                       </div>
-                      <div className="flex items-center gap-x-8 px-3 py-5">
-                        <div className="text-violet-500  transition-all duration-300 hover:scale-125">
-                          <BsPersonWorkspace size={36} />
+                      <div className="flex items-start gap-x-6 px-3 py-5">
+                        <div className="text-[#16f2b3] transition-all duration-300 hover:scale-125 mt-1">
+                          <BsPersonWorkspace size={28} />
                         </div>
                         <div>
-                          <p className="text-base sm:text-xl mb-2 font-medium uppercase">
+                          <p className="text-base sm:text-lg font-bold uppercase text-white mb-1">
                             {experience.title}
                           </p>
-                          <p className="text-sm sm:text-base">
-                            {experience.company}
-                          </p>
+                          <p className="text-sm text-[#16f2b3] font-mono mb-2">{experience.company}</p>
+                          {experience.description && (
+                            <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">{experience.description}</p>
+                          )}
                         </div>
                       </div>
                     </div>
                   </GlowCard>
-                ))
-              }
-            </div>
+                </motion.div>
+              ))
+            }
           </div>
         </div>
       </div>

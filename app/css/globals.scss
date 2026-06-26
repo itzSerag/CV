@@ -2,6 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ===================== SCROLL REVEAL ===================== */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(36px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(36px);
+}
+
+.reveal-visible {
+  animation: fadeSlideUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ===================== COUNTER ===================== */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.stat-number {
+  animation: countUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+
 :root {
   --foreground-rgb: rgb(211, 216, 232);
 }
@@ -14,7 +46,32 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: #0d1224;
+  background-color: #050505;
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.035) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background-color: #16f2b3;
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+}
+
+@keyframes pulse-light {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; }
+}
+
+.status-pulse {
+  animation: pulse-light 2s ease-in-out infinite;
 }
 
 #sticky-card-1 {
@@ -34,6 +91,5 @@ body {
 }
 
 .sticky-card {
-  // padding-top: calc(var(--index) * 2.5rem);
   top: calc(var(--index) * 4rem);
 }
