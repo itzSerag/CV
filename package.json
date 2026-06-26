@@ -31,11 +31,11 @@
     "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
-    "autoprefixer": "latest",
+    "autoprefixer": "^10.5.2",
     "eslint": "latest",
     "eslint-config-next": "latest",
-    "postcss": "latest",
+    "postcss": "^8.5.15",
     "sass": "^1.69.5",
-    "tailwindcss": "latest"
+    "tailwindcss": "^3.4.19"
   }
 }
