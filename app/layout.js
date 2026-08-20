@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
       <meta property="og:title" content="Portfolio Serag Eldien - Software Developer" />
       <meta property="og:description" content="This is the portfolio of Serag Eldien. I am a Backend developer and a self taught developer. I love to learn new things and I am always open to collaborating with others. I am a quick learner and I am always looking for new challenges." />
       <meta property="og:image" content="https://drive.google.com/file/d/1eQ5SUHLRKtHXuo0N2SySJx-6noJg4NbD/view" />
-      <meta property="og:url" content="https://serag-eldein-portfolio.netlify.app/" />
+      <meta property="og:url" content="https://serag-eldein-portfolio.vercel.app/" />
       <meta property="og:site_name" content="Portfolio Serag Eldien - Software Developer" />
       <meta name="description" content="This is the portfolio of Serag Eldien. I am a Backend developer and a self taught developer. I love to learn new things and I am always open to collaborating with others. I am a quick learner and I am always looking for new challenges." />
       <body className={inter.className}>

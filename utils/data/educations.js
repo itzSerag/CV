@@ -4,7 +4,7 @@ export const educations = [
     title: "B.Sc. Computer Science",
     duration: "Sep 2020 – Sep 2024",
     institution:
-      "Ain Shams University — Faculty of Science, Computer Science Department | GPA: 3.4 / 4.0",
+      "Ain Shams University — Faculty of Science, Computer Science Department",
   },
   {
     id: 2,
