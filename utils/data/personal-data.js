@@ -9,11 +9,10 @@ export const personalData = {
   address: "Cairo, Egypt",
   github: "https://github.com/itzSerag",
   facebook: "https://www.facebook.com/serageldien.mahmoud",
-  linkedIn: "https://www.linkedin.com/in/serag-eldien-mahmoud-530a51233/",
+  linkedIn: "https://www.linkedin.com/in/serag-eldien-mahmoud",
   twitter: "",
   stackOverflow: "",
   leetcode: "https://leetcode.com/u/serag_eldien_mahmoud",
   devUsername: "itzserag",
-  resume:
-    "https://drive.google.com/file/d/1RIq7_DnKmxDA5d90gcvEArQ_dPfz9LGX/view?usp=sharing",
+  resume: "/resume/resume.pdf",
 };

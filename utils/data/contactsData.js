@@ -5,7 +5,7 @@ export const contactsData = {
     github: 'https://github.com/itzSerag',
     facebook: 'https://www.facebook.com/serageldien.mahmoud',
 
-    linkedIn: 'https://www.linkedin.com/in/serag-eldien-mahmoud-530a51233/',
+    linkedIn: 'https://www.linkedin.com/in/serag-eldien-mahmoud',
 
     twitter: 'https://twitter.com/said7388',
 

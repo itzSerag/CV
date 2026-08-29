@@ -35,6 +35,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-
-# Files
-Resume
+# local Resume source files
+/Resume/
